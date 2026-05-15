@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffffff, #f3f8ff);
+  color: #162052;
+  padding-bottom: 90px;
+}
+
+header {
+  background: transparent;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-topo {
+  width: 180px;
+  max-width: 80%;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px hsla(0, 0%, 100%, 0.377);
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+main {
+  padding: 20px;
+}
+
+.tela {
+  display: none;
+  background: white;
+  padding: 22px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(22, 32, 82, 0.12);
+}
+
+.tela.ativa {
+  display: block;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin: 20px 0 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 14px;
+  border: 1px solid #dbe3f0;
+  background: #f8fbff;
+  color: #162052;
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+}
+
+button {
+  background: linear-gradient(135deg, #3167f6, #48c78e);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 14px;
+  font-weight: bold;
+  padding: 16px 24px;
+min-height: 56px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background: #f8fbff;
+  padding: 14px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(22, 32, 82, 0.06);
+}
+
+.calendario {
+  background-color: #eee;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-inferior {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  background: white;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(22, 32, 82, 0.15);
+}
+
+.menu-inferior button {
+  flex: 1;
+  background: transparent;
+  color: #162052;
+  font-size: 14px;
+  border-radius: 16px;
+}
+
+.menu-inferior button:hover {
+  background: #eef4ff;
+}
+
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.excluir {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.excluir:hover {
+  color: #222;
+}
+
+
+.controle-calendario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.controle-calendario button {
+  width: 50px;
+}
+
+.calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  overflow: hidden;
+  gap: 4px;
+  background: #eef4ff;
+  padding: 8px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dia-semana,
+.dia-calendario {
+  min-width: 0;
+  font-size: 13px;
+}
+
+.dia-calendario {
+  position: relative;
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 8px 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.linha-form {
+  display: flex;
+  gap: 10px;
+}
+
+.linha-form input {
+  width: 100%;
+}
+
+.dia-calendario {
+  position: relative;
+  cursor: pointer;
+}
+
+.dia-passado::after {
+  content: "X";
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  font-size: 10px;
+  color: #777;
+}
+
+.dia-hoje {
+  background-color: #f1f1f1;
+  border: 2px solid #999;
+}
+
+.bolinha-verde {
+  width: 7px;
+  height: 7px;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.conta-destacada .texto-conta::before {
+  content: "● ";
+  color: green;
+  font-size: 18px;
+}
+
+.lado-esquerdo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.concluida {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+header {
+  background-color: #222;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lista-anotacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.bloco-anotacao {
+  background: #f8fbff;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(22, 32, 82, 0.08);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.bloco-anotacao p {
+  flex: 1;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.excluir-anotacao {
+  background: none;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  min-height: auto;
+  padding: 0;
+}
+
+.arrastar {
+  cursor: grab;
+  color: #777;
+  font-size: 18px;
+}
+
+.arrastando {
+  opacity: 0.5;
+}
+
+.tipo-botoes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tipo-botoes button {
+  flex: 1;
+  background: #eef4ff;
+  color: #162052;
+}
+
+.tipo-botoes .tipo-ativo {
+  background: linear-gradient(135deg, #3167f6, #48c78e);
+  color: white;
+}
+
+.escondido {
+  display: none;
+}
+
+#preview-lista {
+  margin-top: 10px;
+}
+
+
+.item-lista {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.item-lista:hover {
+  opacity: 0.8;
+}
+
+.item-concluido {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.btn-pago {
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+  padding: 0;
+
+  background: white;
+  color: transparent;
+
+  border: 2px solid #dbe3f0;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-pago.pago {
+  background: #48c78e;
+  border-color: #48c78e;
+  color: white;
+}
+
+.conta-paga {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.aviso-pwa {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: white;
+  color: #162052;
+
+  padding: 14px 18px;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(22, 32, 82, 0.15);
+
+  z-index: 999;
+
+  transition: 0.3s;
+}
+
+.escondido {
+  opacity: 0;
+  pointer-events: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.dia-selecionado {
+  background: #dfe8ff;
+  border: 2px solid #3167f6;
+}

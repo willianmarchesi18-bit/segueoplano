@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segue o Plano</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <header>
+    <div id="aviso-pwa" class="aviso-pwa escondido">
+  Adicione o Segue o Plano à tela inicial 📱
+</div>
+
+    <img src="logo-topo.png" alt="Segue o Plano" class="logo-topo">
+  </header>
+
+  <main>
+
+    <section id="rotina" class="tela">
+      <h2>Rotina</h2>
+
+      <form id="form-rotina">
+        <input type="text" id="input-rotina" placeholder="Ex: caminhada, estudo, 2 litros d'água...">
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <ul id="lista-rotina"></ul>
+    </section>
+
+    <section id="mes" class="tela ativa">
+      <h2>Calendário e contas do mês</h2>
+
+      <div class="controle-calendario">
+        <button id="mes-anterior" type="button">◀</button>
+        <h3 id="titulo-calendario"></h3>
+        <button id="mes-proximo" type="button">▶</button>
+      </div>
+
+      <div id="calendario" class="calendario"></div>
+
+      <h3>Contas fixas</h3>
+
+      <form id="form-conta">
+        <input type="text" id="nome-conta" placeholder="Nome da conta">
+
+        <div class="linha-form">
+          <input type="number" id="valor-conta" placeholder="Valor">
+          <input type="date" id="data-conta">
+        </div>
+
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <ul id="lista-contas"></ul>
+    </section>
+
+   <section id="anotacoes" class="tela">
+  <h2>Anotações</h2>
+
+  <div class="tipo-botoes">
+    <button type="button" id="btn-anotacao" class="tipo-ativo">Anotação</button>
+    <button type="button" id="btn-lista">Lista</button>
+  </div>
+
+  <form id="form-anotacao">
+    <textarea id="input-anotacao" placeholder="Escreva uma anotação..."></textarea>
+    <button type="submit">Salvar anotação</button>
+  </form>
+
+  <form id="form-lista" class="escondido">
+    <input type="text" id="input-item-lista" placeholder="Adicionar item na lista...">
+    <button type="button" id="btn-adicionar-item">Adicionar item</button>
+
+    <ul id="preview-lista"></ul>
+
+    <button type="submit">Salvar lista</button>
+  </form>
+
+  <div id="lista-anotacoes"></div>
+</section>
+
+  </main>
+
+  <nav class="menu-inferior">
+    <button>Rotina</button>
+    <button>Mês</button>
+    <button>Anotações</button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
